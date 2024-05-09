@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Interaction</title>
+  <script>
+    function checkLogin() {
+      var userName = document.getElementById("userName");
+      var password = document.getElementById("password");
+      if (userName.value=="") {
+        alert("Bạn chưa nhập user Name");
+        userName.focus();
+      }else if(password.value==""){
+        alert("Bạn chưa nhập password");
+        password.focus();
+      }
+    }
+  </script>
+</head>
+<body>
+  <form action="">
+    <table width="350">
+        <caption>
+            <h1>Login</h1>
+        </caption>
+        <tr>
+            <td>User Name</td>
+            <td>
+                <input type="text" name="userName" id="userName" placeholder="Nhập tên đăng nhập"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Passwords</td>
+            <td>
+                <input type="password" name="password" id="password" placeholder="Nhập mật khẩu"/>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="button" value="Login" id="Login" name="Login" onclick="checkLogin()">
+            </td>
+        </tr>
+    </table>
+  </form>
+</body>
+</html>
